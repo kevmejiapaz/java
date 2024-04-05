@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        double persona1=0;
+        double persona2=0;
+        double persona3=0;
+        double montoinversion=0;
+        double montototal=0;
+        
+        for(int inversionista=1; inversionista<=3; inversionista++){
+            
+            System.out.println("ingresa el numero del inversionista que correspoda: 1. Inversionista A - 2. Inversionista B - 3. Inversionista C");
+            Scanner leer= new Scanner(System.in);
+            int opcion=leer.nextInt();
+            
+            if(opcion==1 || opcion==2 || opcion==3){
+            
+             System.out.println("Ingrese el monto a invertir ");
+             montoinversion=leer.nextInt();
+              
+              if(opcion==1){
+                 persona1= montoinversion;
+              }
+              else if (opcion==2){
+                  persona2= montoinversion;
+              }
+              else if (opcion==3){
+                  persona3= montoinversion;
+              }
+            else  System.out.println("opcion invalida " + inversionista-- );
+            montototal=montototal+montoinversion;
+        }else {System.out.println("opcion invalida ");inversionista--; }
+        
+        } 
+        
+     System.out.println("El total de la inversion es: " +montototal);
+     
+      System.out.println("El inversionista A invirtio:  $" +persona1 +" y su porcentaje de inversion es: %" + persona1/montototal*100);
+      System.out.println("El inversionista B invirtio:  $" +persona2 +" y su porcentaje de inversion es: %" + persona2/montototal*100);
+     System.out.println("El inversionista C invirtio:  $" +persona3 +" y su porcentaje de inversion es: %" + persona3/montototal*100);
+        
+        
+        
+        
+    }
+}
